@@ -8,34 +8,6 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.create(:name => params[:landmark][:name],
       :year_completed => params[:landmark][:year_completed])
 
-    # if params[:figure][:title_ids] != nil
-    #   params[:figure][:title_ids].each do |title_id|
-    #     @figure.titles << Title.find(title_id)
-    #     @figure.save
-    #   end
-    # end
-    #
-    # if params[:figure][:landmark_ids] != nil
-    #   params[:figure][:landmark_ids].each do |landmark_id|
-    #     existing_landmark = Landmark.find(landmark_id)
-    #     @figure.landmarks << existing_landmark
-    #     existing_landmark.figure_id = @figure.id
-    #     existing_landmark.save
-    #     @figure.save
-    #   end
-    # end
-    #
-    # if params[:title][:name] != nil
-    #   @figure.titles << Title.create(:name => params[:title][:name])
-    #   @figure.save
-    # end
-    #
-    # if params[:landmark][:name] != nil
-    #   @figure.landmarks << Landmark.create(:name => params[:landmark][:name],
-    #     :figure_id => @figure.id)
-    #   @figure.save
-    # end
-
     redirect to '/landmarks'
   end
 
